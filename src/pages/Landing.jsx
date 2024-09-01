@@ -8,7 +8,7 @@ const Landing = () => {
   return (
     <div>
         <Layout>
-      <Navbar />
+      
       <HeroSection />
       <Features />
       </Layout>
