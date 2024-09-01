@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Navbar({ onMenuClick }) {
     
@@ -5,10 +6,11 @@ export default function Navbar({ onMenuClick }) {
       <nav className="fixed top-0 h-32 left-0 right-0 z-50 bg-white bg-opacity-90 backdrop-blur-sm shadow-md item-center justify-center py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-24">
-            <div className="flex gap-6 items-center">
+            <Link to='/'><div className="flex gap-6 items-center">
               <img src="/a.png" alt="Logo" className="h-20 w-auto" />
               <span className="ml-2 text-5xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">Project Sherpa</span>
             </div>
+            </Link>
             
             <div className="flex items-center">
             <button
@@ -23,9 +25,9 @@ export default function Navbar({ onMenuClick }) {
 
 
               <div className="hidden lg:flex md:items-center md:space-x-10 font-bold text-2xl">
-                <a href="#" className="text-gray-700 hover:text-indigo-600">Technology</a>
-                <a href="#" className="text-gray-700 hover:text-indigo-600">Team</a>
-                <a href="#" className="text-gray-700 hover:text-indigo-600 button rounded-xl py-2 px-4 bg-slate-400">Product</a>
+                <Link to="/technology" className="text-gray-700 hover:text-indigo-600">Technology</Link>                
+                <Link to="/about" className="text-gray-700 hover:text-indigo-600">About Us</Link>                
+                <Link to='product' className="text-gray-700 hover:text-indigo-600 button rounded-xl py-2 px-4 bg-slate-400">Product</Link>
                 <a href="#" className="text-gray-700 hover:text-indigo-600"></a>
               </div>
             </div>

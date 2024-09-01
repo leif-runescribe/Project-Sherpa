@@ -2,11 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Landing from './pages/Landing';
+import Technology from './pages/Technology';
+import Team from './pages/Team';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Landing/>,
+  },
+  {
+    path: "/technology",
+    element: <Technology/>,
+  },
+  {
+    path: "/about",
+    element: <Team/>,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}><App /></RouterProvider>
   </React.StrictMode>
 );
+
