@@ -10,7 +10,7 @@ export default function HeroSection() {
           <div className="relative z-10 text-center pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
             <main className="mt-20  max-w-7xl  sm:mt-12 sm:px-6 md:mt-16 lg:mt-20  xl:mt-28">
               <div className="text-center ">
-                <h1 className="text-4xl mt-60   font-extrabold text-white sm:text-6xl md:text-6xl ">
+                <h1 className="text-4xl md:mt-40 mt-32   font-extrabold text-white sm:text-6xl md:text-6xl ">
                   <span className="block">Join the Future of </span>
                   <span className="block text-indigo-400">Technology based Orchard Management</span>
                 </h1>
