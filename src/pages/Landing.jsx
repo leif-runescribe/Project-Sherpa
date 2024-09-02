@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Features from "../components/Features";
+import Footer from "../components/Footer";
 
 const Landing = () => {
   return (
@@ -11,7 +12,9 @@ const Landing = () => {
       
       <HeroSection />
       <Features />
+      <Footer/>
       </Layout>
+      
     </div>
   );
 };
