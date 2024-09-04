@@ -19,7 +19,7 @@ export default function HeroSection() {
             <span className="mx-auto block">Join the Future of</span>
             <span className="block text-indigo-400">Technology based Orchard Management</span>
           </h1>
-          <p className="mt-3 text-center w-full text-gray-300 sm:mt-5 sm:text-3xl sm:max-w-xl md:mt-5 md:text-5xl">
+          <p className="mt-3 mx-auto text-center w-full text-gray-300 sm:mt-5 sm:text-3xl sm:max-w-xl md:mt-5 md:text-5xl">
             Revolutionizing Apple Cultivation in Himachal Pradesh Through Intelligent Drone Solutions
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center">
