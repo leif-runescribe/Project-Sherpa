@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import Footer from '../components/Footer';
 
 const Technology = () => {
   return (
@@ -147,6 +148,7 @@ const Technology = () => {
         </div>
       </section>
     </div>
+   <Footer/>
     </Layout>
   );
 };
