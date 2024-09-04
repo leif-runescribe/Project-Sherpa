@@ -32,7 +32,7 @@ const Technology = () => {
             </ul>
           </div>
           <div className="lg:w-1/2">
-            <img src="/images/health-monitoring.jpg" alt="Tree Health Monitoring" className="w-full rounded-lg shadow-md" />
+            <img src="https://images.pexels.com/photos/28144764/pexels-photo-28144764/free-photo-of-a-bunch-of-apples-on-a-tree-with-leaves.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tree Health Monitoring" className="w-full rounded-lg shadow-md h-[60vh]" />
           </div>
         </div>
       </section>
@@ -54,7 +54,7 @@ const Technology = () => {
             </ul>
           </div>
           <div className="lg:w-1/2">
-            <img src="/images/precision-management.jpg" alt="Precision Management" className="w-full rounded-lg shadow-md" />
+            <img src="https://images.pexels.com/photos/5528996/pexels-photo-5528996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Precision Management" className="w-full rounded-lg shadow-md h-[60vh]" />
           </div>
         </div>
       </section>
@@ -76,7 +76,7 @@ const Technology = () => {
             </ul>
           </div>
           <div className="lg:w-1/2">
-            <img src="/images/data-analytics.jpg" alt="Data Analytics" className="w-full rounded-lg shadow-md" />
+            <img src="https://www.researchgate.net/publication/338440436/figure/fig4/AS:844877197766657@1578445829192/Comparison-between-the-original-YOLOv3-tiny-and-our-modified-version-that-performs.jpg" alt="Data Analytics" className="w-full rounded-lg shadow-md " />
           </div>
         </div>
       </section>
@@ -98,7 +98,7 @@ const Technology = () => {
             </ul>
           </div>
           <div className="lg:w-1/2">
-            <img src="/images/marketing-tools.jpg" alt="Marketing Tools" className="w-full rounded-lg shadow-md" />
+            <img src="https://images.pexels.com/photos/4916114/pexels-photo-4916114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Marketing Tools" className="w-full rounded-lg shadow-md h-[60vh] " />
           </div>
         </div>
       </section>
@@ -120,7 +120,7 @@ const Technology = () => {
             </ul>
           </div>
           <div className="lg:w-1/2">
-            <img src="/images/integration.jpg" alt="Seamless Integration" className="w-full rounded-lg shadow-md" />
+            <img src="https://images.pexels.com/photos/5806223/pexels-photo-5806223.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Seamless Integration" className="w-full rounded-lg shadow-md h-[60vh]" />
           </div>
         </div>
       </section>
@@ -142,7 +142,7 @@ const Technology = () => {
             </ul>
           </div>
           <div className="lg:w-1/2">
-            <img src="/images/future-innovations.jpg" alt="Future Innovations" className="w-full rounded-lg shadow-md" />
+            <img src="https://images.pexels.com/photos/18660499/pexels-photo-18660499/free-photo-of-view-of-dji-air-3-drone-flying-in-the-forest-in-south-of-france.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Future Innovations" className="w-full rounded-lg shadow-md h-[60vh]" />
           </div>
         </div>
       </section>
