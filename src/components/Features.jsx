@@ -7,7 +7,7 @@ const Features = () => {
   <div class="container py-20 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
       <h2 class="text-4xl  tracking-widest font-medium title-font mb-1">What exactly does Sherpa do?</h2>
-      <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900">Here are the features we provide which will potentially</h1>
+      <h1 class="sm:text-4xl px-20 text-2xl font-bold title-font mb-4 text-gray-900">Here are the features we provide which will potentially</h1>
       <p class="lg:w-2/3 text-3xl font-extrabold mx-auto leading-relaxed ">enhance the Productivity, Sustainability, and Profitability in Himachal Pradesh's Apple Industry</p>
     </div>
     <div class="flex flex-wrap">
@@ -73,7 +73,7 @@ const Features = () => {
       
       
     </div>
-    <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+    <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Learn more</button>
   </div>
 </section>
     </div>
