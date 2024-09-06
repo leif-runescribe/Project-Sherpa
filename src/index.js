@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Technology from './pages/Technology';
 import Team from './pages/Team';
+import Contact from './components/Contact';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,12 @@ const router = createBrowserRouter([
     path: "/about",
     element: <Team/>,
   },
+  {
+    path:"/contact",
+    element:<Contact/>
+
+  }
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

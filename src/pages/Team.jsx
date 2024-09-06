@@ -7,7 +7,7 @@ const Team= () => {
     <div className="bg-gray-50  bg-gradient-to-br from-cyan-800 via-blue-600 to-violet-600 min-h-screen p-8">
       <Navbar/>
       {/* Header Section */}
-      <header className="text-center mb-12 mt-20">
+      <header className="text-center mb-12 mt-20 pt-20">
         <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
           About Us: Innovating the Future of Orchard Management
         </h1>

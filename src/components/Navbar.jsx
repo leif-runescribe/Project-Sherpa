@@ -24,11 +24,11 @@ export default function Navbar({ onMenuClick }) {
 
 
 
-              <div className="hidden lg:flex items-center md:space-x-10 font-bold text-xl">
+              <div className="hidden lg:flex items-center gap-5 font-bold text-xl">
                 <Link to="/technology" className="text-gray-700 hover:text-indigo-600 ">Technology</Link>                
                 <Link to="/about" className="text-gray-700 hover:text-indigo-600">About Us</Link>                
-                <Link to='product' className="text-gray-700 hover:text-indigo-600 button rounded-xl py-2 px-4 bg-slate-400">Product</Link>
-                <a href="#" className="text-gray-700 hover:text-indigo-600"></a>
+                <Link to='/contact' className="text-gray-700 hover:text-indigo-600 ">Contact</Link>
+                
               </div>
             </div>
           </div>

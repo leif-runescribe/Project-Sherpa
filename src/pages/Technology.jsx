@@ -9,7 +9,7 @@ const Technology = () => {
       {/* Header Section */}
       <header className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-          Transforming Orchard Management with Cutting-Edge Technology
+          Transforming Apple Orchard Management System with Drone Intelligent System 
         </h1>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto">
           Explore how our advanced technology enhances apple orchard management, from tree health monitoring to precision agriculture and innovative marketing tools.
@@ -46,7 +46,7 @@ const Technology = () => {
               Precision Nutrient, Pest, and Disease Management
             </h2>
             <p className="text-lg text-gray-800 mb-6">
-              Utilize precision agriculture techniques for managing nutrients, pests, and diseases with pinpoint accuracy. Our drones ensure the precise application of fertilizers, pesticides, and fungicides, reducing waste and environmental impact while enhancing orchard productivity.
+              Utilizing precision agriculture techniques for managing nutrients, pests, and diseases with pinpoint accuracy. Our drones ensure the precise application of fertilizers, pesticides, and fungicides, reducing waste and environmental impact while enhancing orchard productivity.
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Reduced costs and environmental footprint.</li>
@@ -68,7 +68,7 @@ const Technology = () => {
               Advanced Data Analytics
             </h2>
             <p className="text-lg text-gray-800 mb-6">
-              Leverage advanced data analytics and machine learning to predict yields and optimize decision-making. Our analytics platform processes extensive data to deliver actionable insights and improve productivity and efficiency in orchard management.
+              Using advanced data analytics and machine learning to predict yields and optimize decision-making. Our analytics platform processes extensive data to deliver actionable insights and improve productivity and efficiency in orchard management.
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Accurate yield forecasting with predictive analytics.</li>
@@ -90,7 +90,7 @@ const Technology = () => {
               Innovative Marketing Tools
             </h2>
             <p className="text-lg text-gray-800 mb-6">
-              Elevate your marketing strategy with cutting-edge tools. From virtual orchard tours to blockchain traceability and engaging digital content, we help enhance the visibility and marketability of your apple produce.
+              Elevate your marketing strategy with digital marketing tools. From virtual orchard tours to blockchain traceability and engaging digital content, we help enhance the visibility and marketability of your apple produce.
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Attract buyers with virtual orchard tours.</li>
