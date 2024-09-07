@@ -6,7 +6,6 @@ const Team= () => {
     
     <div className="bg-gray-50  bg-gradient-to-br from-cyan-800 via-blue-600 to-violet-600 min-h-screen p-8">
       <Navbar/>
-      {/* Header Section */}
       <header className="text-center mb-12 mt-20 pt-20">
         <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
           About Us: Innovating the Future of Orchard Management
@@ -16,7 +15,7 @@ const Team= () => {
         </p>
       </header>
 
-      {/* Section 1: Our Mission */}
+  
       <section className="bg-white p-8 rounded-lg shadow-lg mb-16">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
           <div className="lg:w-1/2 mb-8 lg:mb-0">
@@ -38,7 +37,6 @@ const Team= () => {
         </div>
       </section>
 
-      {/* Section 2: Our Team */}
       <section className="bg-indigo-50 p-8 rounded-lg shadow-lg mb-16">
         <h2 className="text-3xl font-semibold text-indigo-600 text-center mb-6">
           Meet Our Team
@@ -91,7 +89,7 @@ const Team= () => {
         </div>
       </section>
 
-      {/* Section 3: Our Values */}
+    
       <section className="bg-teal-50 p-8 rounded-lg shadow-lg mb-16">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-semibold text-teal-600">
@@ -134,9 +132,7 @@ const Team= () => {
           </div>
         </div>
       </section>
-
-      
-            </div>
+    </div>
   )
 }
 
