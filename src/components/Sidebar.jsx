@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Sidebar({ isOpen, onClose }) {
     return (
       <div
@@ -14,12 +16,12 @@ export default function Sidebar({ isOpen, onClose }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <nav className="mt-8">
-            <a href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-50 hover:text-indigo-600">Home</a>
-            <a href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-50 hover:text-indigo-600">Features</a>
-            <a href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-indigo-50 hover:text-indigo-600">Connect Wallet</a>
+          <div className="space-y-12 py-20 text-2xl">
+          <Link to="/technology" className="block text-gray-700 hover:text-indigo-600 ">Technology</Link>                
+          <Link to="/about" className="block text-gray-700 hover:text-indigo-600">About Us</Link>                
+          <Link to='/contact' className="block text-gray-700 hover:text-indigo-600 ">Contact</Link>
 
-          </nav>
+          </div>
         </div>
       </div>
     );

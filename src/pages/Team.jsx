@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Layout from '../components/Layout';
 
 const Team= () => {
   return (
     
     <div className="bg-gray-50  bg-gradient-to-br from-cyan-800 via-blue-600 to-violet-600 min-h-screen p-8">
-      <Navbar/>
+      <Layout>
       {/* Header Section */}
       <header className="text-center mb-12 mt-20 pt-20">
         <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
@@ -135,7 +136,7 @@ const Team= () => {
         </div>
       </section>
 
-      
+      </Layout>
             </div>
   )
 }

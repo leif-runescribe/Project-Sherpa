@@ -7,6 +7,7 @@ import Landing from './pages/Landing';
 import Technology from './pages/Technology';
 import Team from './pages/Team';
 import Contact from './components/Contact';
+import ContactUs from './pages/ContactUs';
 
 const router = createBrowserRouter([
   {
