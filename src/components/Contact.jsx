@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './Navbar'
+import Sidebar from './Sidebar';
 
 export default function Contact() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div className=" min-h-screen m-2 flex justify-center items-center bg-indigo-800 pt-20">
+      <Navbar onMenuClick={() => setSidebarOpen(true)} />
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     <div className="w-full max-w-lg  rounded-lg shadow-md p-8 bg-white">
-        <Navbar/>
+        
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-800">Contact Us</h2>
       <p className="mb-8 font-light text-center text-white sm:text-xl">Give Your Valuable Feedback</p>
       <form className="space-y-6">
