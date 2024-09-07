@@ -6,12 +6,7 @@ const Team= () => {
   return (
     
     <div className="bg-gray-50  bg-gradient-to-br from-cyan-800 via-blue-600 to-violet-600 min-h-screen p-8">
-<<<<<<< HEAD
       <Navbar/>
-=======
-      <Layout>
-      {/* Header Section */}
->>>>>>> cea02db89a467e2b098ab22d80c6d069b72a030b
       <header className="text-center mb-12 mt-20 pt-20">
         <h1 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
           About Us: Innovating the Future of Orchard Management
@@ -138,13 +133,7 @@ const Team= () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-=======
-
-      </Layout>
-            </div>
->>>>>>> cea02db89a467e2b098ab22d80c6d069b72a030b
   )
 }
 
