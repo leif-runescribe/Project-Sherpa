@@ -7,7 +7,10 @@ import Landing from './pages/Landing';
 import Technology from './pages/Technology';
 import Team from './pages/Team';
 import Contact from './components/Contact';
-import ContactUs from './pages/ContactUs';
+
+import QRCodeExample from './components/AppleQRCode';
+import AppleInfo from './components/AppleInfo';
+
 
 const router = createBrowserRouter([
   {
@@ -26,9 +29,20 @@ const router = createBrowserRouter([
     path:"/contact",
     element:<Contact/>
 
-  }
+  },
+ 
+  {
+    path:"/qr",
+    element: <QRCodeExample/>
+  },
+  {
+    path:"/apple/:id",
+    element: <AppleInfo/>
+  },
+  
   
 ]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

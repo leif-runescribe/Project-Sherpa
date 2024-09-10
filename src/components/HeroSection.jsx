@@ -15,6 +15,7 @@ export default function HeroSection() {
           Your browser does not support the video tag.
         </video>
         <div className='absolute text-center bg-black bg-opacity-50 text-white p-4 rounded px-40 '>
+          
           <h1 className="text-4xl md:mt-40 text-center mt-28 font-extrabold text-white sm:text-6xl md:text-6xl">
             <span className="mx-auto block">Join the Future of</span>
             <span className="block text-indigo-400">Technology based Orchard Management</span>
