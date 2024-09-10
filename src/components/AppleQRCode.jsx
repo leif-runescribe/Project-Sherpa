@@ -16,7 +16,7 @@ const appleDatabase = [
 ];
 
 const AppleQRCode = ({ apple }) => {
-  const url = `https://project-sherpa.vercel.app/${apple.id}`; // URL for the apple details page
+  const url = `https://project-sherpa.vercel.app/apple/${apple.id}`; // URL for the apple details page
 
   return (
     <div className="flex flex-col items-center mb-8">
