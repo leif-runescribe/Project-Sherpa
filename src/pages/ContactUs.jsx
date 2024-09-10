@@ -6,7 +6,7 @@ const ContactUs = () => {
   return (
     <div className="relative">
         <Layout>
-      <div className="mt-40 absolute inset-0 overflow-hidden">
+      <div className="mt-40 px-40 absolute inset-0 overflow-hidden">
         <svg
           className="absolute top-0 left-0 -z-10 h-full w-full"
           fill="none"
@@ -21,16 +21,11 @@ const ContactUs = () => {
             strokeWidth="1"
             strokeOpacity="0.2"
           />
-          <defs>
-            <linearGradient id="gradient" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stopColor="#6ee7b7" />
-              <stop offset="100%" stopColor="#3b82f6" />
-            </linearGradient>
-          </defs>
+          
         </svg>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center items-center relative">
+      <div className="flex flex-col lg:flex-row justify-center items-center px-40 py-20 relative">
         {/* Heading */}
         <div className="lg:w-1/2 text-center lg:text-left lg:pr-12 mb-12 lg:mb-0">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 leading-tight">
@@ -39,7 +34,7 @@ const ContactUs = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="lg:w-1/2 bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+        <div className="lg:w-1/2 mt-20 bg-white p-8 rounded-lg shadow-lg border border-gray-200">
           <form>
             <div className="mb-6">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">

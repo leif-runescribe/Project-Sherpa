@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { Link } from 'react-router-dom';
 
-const SignIn = () => {
+const Join = () => {
   // Define state to store form data
   const [formData, setFormData] = useState({
     username: '',
@@ -43,14 +43,25 @@ const SignIn = () => {
   };
 
   return (
-    <div>
+    <div >
         <Layout>
-        <div className='py-10 md:py-20 px-20'>
-    <div className="max-w-3xl mx-auto mt-16 p-10 bg-gray-100 shadow-lg rounded-2xl">
-    <h2 className="text-2xl font-bold text-gray-800 mb-8">Sign In</h2>
+            <div className='py-10 md:py-20 px-20'>
+    <div className="max-w-3xl mt-16 mx-auto  p-10 bg-gray-200 shadow-lg rounded-2xl">
+    <h2 className="text-2xl font-bold text-gray-800 mb-8">Create an Account</h2>
     <form onSubmit={handleSubmit} className="space-y-8">
       {/* Username Input */}
-      
+      <div>
+        <label htmlFor="username" className="block text-xl font-bold text-gray-600">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+          required
+          className="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition duration-300 ease-in-out"
+        />
+      </div>
 
       {/* Email Input */}
       <div>
@@ -80,7 +91,49 @@ const SignIn = () => {
         />
       </div>
 
-      
+      {/* Role Dropdown */}
+      <div>
+        <label htmlFor="role" className="block text-xl font-bold text-gray-600">Role</label>
+        <select
+          id="role"
+          name="role"
+          value={formData.role}
+          onChange={handleChange}
+          required
+          className="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white rounded-lg shadow-sm focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition duration-300 ease-in-out"
+        >
+          <option className='text-xl' value="customer">Customer</option>
+          <option className='text-xl' value="seller">Seller</option>
+          <option className='text-xl' value="admin">Admin</option>
+        </select>
+      </div>
+
+      {/* Address Input */}
+      <div>
+        <label htmlFor="address" className="block text-xl font-bold text-gray-600">Address</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+          className="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition duration-300 ease-in-out"
+        />
+      </div>
+
+      {/* Phone Number Input */}
+      <div>
+        <label htmlFor="phoneNumber" className="block text-xl font-bold text-gray-600">Phone Number</label>
+        <input
+          type="tel"
+          id="phoneNumber"
+          name="phoneNumber"
+          value={formData.phoneNumber}
+          onChange={handleChange}
+          className="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition duration-300 ease-in-out"
+        />
+      </div>
+
       {/* Submit Button */}
       <div className='text-center'>
         <button
@@ -92,12 +145,12 @@ const SignIn = () => {
       </div>
     </form>
     <div className="text-center text-xl font-semibold text-gray-700 mt-6">
-  <p className="mb-2">Not a member?</p>
+  <p className="mb-2">Already a member?</p>
   <Link
-    to="/join"
+    to="/signin"
     className="text-blue-600 hover:text-blue-800 underline transition duration-300 ease-in-out"
   >
-    Create an account
+    Sign In
   </Link>
 </div>
     </div>
@@ -107,4 +160,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default Join;

@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import JoinUs from "../components/JoinUs";
+import CardContainer from "../components/FeaturesComponents";
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
       
       <HeroSection />
       <Features />
+     
       <JoinUs/>
       <Footer/>
       </Layout>
