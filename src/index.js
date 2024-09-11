@@ -10,6 +10,15 @@ import Contact from './components/Contact';
 
 import QRCodeExample from './components/AppleQRCode';
 import AppleInfo from './components/AppleInfo';
+import Join from './pages/Join';
+import SignIn from './pages/SignIn';
+import Techno from './components/Tech';
+import Dash from './pages/Dash';
+import BusinessModel from './pages/BusinessModel';
+import ContactUs from './pages/ContactUs';
+import { AuthProvider } from './context/AuthContext';
+import Marketplace from './pages/Marketplace';
+
 
 
 const router = createBrowserRouter([
@@ -19,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/technology",
-    element: <Technology/>,
+    element: <Techno/>,
   },
   {
     path: "/about",
@@ -27,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/contact",
-    element:<Contact/>
+    element:<ContactUs/>
 
   },
  
@@ -39,6 +48,26 @@ const router = createBrowserRouter([
     path:"/apple/:id",
     element: <AppleInfo/>
   },
+  {
+    path:"/join",
+    element:<Join/>
+  },
+  {
+    path:"/signin",
+    element:<SignIn/>
+  },
+  {
+    path:"/user/dashboard",
+    element: <Dash/>
+  },
+  {
+    path:"/businessmodel",
+    element: <BusinessModel/>
+  },
+  {
+    path:"/user/marketplace",
+    element: <Marketplace/>
+  }
   
   
 ]);
@@ -47,7 +76,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router}><App /></RouterProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
 

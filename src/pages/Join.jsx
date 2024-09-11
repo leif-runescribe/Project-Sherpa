@@ -1,69 +1,44 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { Link, useNavigate } from 'react-router-dom';
-import AuthContext from '../context/AuthContext';
 
-const SignIn = () => {
+const Join = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate()
-  const { dispatch,state } = useContext(AuthContext);
   // Define state to store form data
   const [formData, setFormData] = useState({
-    
+    username: '',
     email: '',
     password: '',
-    
+    role: 'customer', // Default role
   });
 
   // Handle input change and update formData state
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(formData)
+    
     setFormData({ ...formData, [name]: value });
   };
 
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
     setLoading(true); // Start loading
-    
+    console.log(formData)
+    // Logic to send formData to server
     try {
-      const response = await fetch('https://apple-orchard-1.onrender.com/api/users/login', {
+      const response = await fetch('https://apple-orchard-1.onrender.com/api/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData), // Only sending username, email, password, and role
       });
-      
+
       if (response.ok) {
-        const data = await response.json();
-        console.log('Login response:', data);
-        console.log(state);
-        
-        dispatch({
-          type: 'LOGIN',
-          payload: { user: data.user, token: data.token },
-        });
-        
-        const { user, token } = data;
-        
-        
-      
-        if (user.role === 'seller') {
-          navigate('/user/dashboard');
-        } else if (user.role === 'customer') {
-          navigate('/user/marketplace');
-        } else {
-          console.warn('Unknown user role:', user.role);
-          navigate('/'); 
-        }
-        
+        navigate('/signin')
       } else {
-        const errorData = await response.json();
-        console.error('Login failed:', errorData);
-        alert('Failed to login: ' + (errorData.message || 'Unknown error'));
+        alert('Failed to register');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -71,16 +46,26 @@ const SignIn = () => {
     }
   };
 
-
   return (
-    <div>
+    <div >
         <Layout>
-        <div className='py-10 md:py-20 px-20'>
-    <div className="max-w-3xl mx-auto mt-16 p-10 bg-gray-100 shadow-lg rounded-2xl">
-    <h2 className="text-2xl font-bold text-gray-800 mb-8">Sign In</h2>
+            <div className='py-10 md:py-20 px-20'>
+    <div className="max-w-3xl mt-16 mx-auto  p-10 bg-gray-200 shadow-lg rounded-2xl">
+    <h2 className="text-2xl font-bold text-gray-800 mb-8">Create an Account</h2>
     <form onSubmit={handleSubmit} className="space-y-8">
       {/* Username Input */}
-      
+      <div>
+        <label htmlFor="username" className="block text-xl font-bold text-gray-600">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+          required
+          className="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition duration-300 ease-in-out"
+        />
+      </div>
 
       {/* Email Input */}
       <div>
@@ -110,14 +95,57 @@ const SignIn = () => {
         />
       </div>
 
-      
+      {/* Role Dropdown */}
+      <div>
+        <label htmlFor="role" className="block text-xl font-bold text-gray-600">Role</label>
+        <select
+          id="role"
+          name="role"
+          value={formData.role}
+          onChange={handleChange}
+          required
+          className="mt-2 block w-full px-4 py-3 border border-gray-300 bg-white rounded-lg shadow-sm focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition duration-300 ease-in-out"
+        >
+          <option className='text-xl' value="customer">Customer</option>
+          <option className='text-xl' value="seller">Seller</option>
+          <option className='text-xl' value="admin">Admin</option>
+        </select>
+      </div>
+
+      {/* Address Input */}
+      <div>
+        <label htmlFor="address" className="block text-xl font-bold text-gray-600">Address</label>
+        <input
+          type="text"
+          id="address"
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+          className="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition duration-300 ease-in-out"
+        />
+      </div>
+
+      {/* Phone Number Input */}
+      <div>
+        <label htmlFor="phoneNumber" className="block text-xl font-bold text-gray-600">Phone Number</label>
+        <input
+          type="tel"
+          id="phoneNumber"
+          name="phoneNumber"
+          value={formData.phoneNumber}
+          onChange={handleChange}
+          className="mt-2 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition duration-300 ease-in-out"
+        />
+      </div>
+
       {/* Submit Button */}
       <div className='text-center'>
-        <button
+        <button 
+        
           type="submit"
           className="w-72 bg-blue-600 text-white text-xl font-bold px-4 py-3 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300 ease-in-out"
         >
-          Sign In
+          Sign Up
         </button>
       </div>
     </form>
@@ -129,12 +157,12 @@ const SignIn = () => {
         </div>
       )}
     <div className="text-center text-xl font-semibold text-gray-700 mt-6">
-  <p className="mb-2">Not a member?</p>
+  <p className="mb-2">Already a member?</p>
   <Link
-    to="/join"
+    to="/signin"
     className="text-blue-600 hover:text-blue-800 underline transition duration-300 ease-in-out"
   >
-    Create an account
+    Sign In
   </Link>
 </div>
     </div>
@@ -144,4 +172,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default Join;

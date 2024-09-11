@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 export default function Contact() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <div className=" min-h-screen m-2 flex justify-center items-center bg-indigo-800 pt-20">
+    <div className=" min-h-screen m-2 flex justify-center items-center pt-20">
       <Navbar onMenuClick={() => setSidebarOpen(true)} />
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     <div className="w-full max-w-lg  rounded-lg shadow-md p-8 bg-white">

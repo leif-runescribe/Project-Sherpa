@@ -1,6 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
 
 export default function Sidebar({ isOpen, onClose }) {
+  const { state, dispatch } = useContext(AuthContext); // Access auth state and dispatch function
+
+  const handleSignOut = () => {
+    dispatch({ type: 'LOGOUT' });
+  // Redirect to the sign-in page
+  };
     return (
       <div
         className={`fixed inset-y-0 right-0 w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
@@ -20,7 +28,22 @@ export default function Sidebar({ isOpen, onClose }) {
           <Link to="/technology" className="block text-gray-700 hover:text-indigo-600 ">Technology</Link>                
           <Link to="/about" className="block text-gray-700 hover:text-indigo-600">About Us</Link>                
           <Link to='/contact' className="block text-gray-700 hover:text-indigo-600 ">Contact</Link>
-
+          {state.isAuthenticated ? (
+          <button 
+            className="block text-gray-700 hover:text-red-600"
+            onClick={handleSignOut}
+          >
+            Logout<br/>
+            <span className="text-blue-500">({state.user.username})</span>
+          </button>
+        ) : (
+          <Link 
+            to="/signin"
+            className="block text-gray-700 hover:text-indigo-600"
+          >
+            Sign In
+          </Link>
+        )}
           </div>
         </div>
       </div>
