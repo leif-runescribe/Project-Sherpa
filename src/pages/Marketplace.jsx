@@ -4,47 +4,48 @@ import Layout from '../components/Layout';
 
 // Mock data for demonstration
 const appleVarieties = [
-  { id: 1, name: "Kullu Fresh", origin:'Kullu', variety: 'Honeycrisp', price: 2.5, stock: 5000, quality: 95 },
-  { id: 2, name: "Shimla Royal Orchards", origin:'Manali', variety:'Gala', price: 1.8, stock: 8000, quality: 92 },
-  { id: 3, name: "Pahadi Farms", origin:'Shimla',  variety:'Fuji', price: 2.2, stock: 6000, quality: 94 },
-  { id: 4, name: "Rawat Apple Company", origin:'Dehradun', variety:'Granny Smith', price: 1.9, stock: 7000, quality: 91 },
-  { id: 1, name: "Hills Fresh",  origin:'Kullu',variety:'Honeycrisp', price: 2.5, stock: 5000, quality: 95 },
-  { id: 2, name: "Apple Paradise", origin:'Kullu', variety:'Gala', price: 1.8, stock: 8000, quality: 92 },
-  { id: 3, name: "GOAT Apples", origin:'Shimla', variety:'Fuji', price: 2.2, stock: 6000, quality: 94 },
-  { id: 4, name: "Skibidi apples", origin:'Shimla', variety:'Granny Smith', price: 1.9, stock: 7000, quality: 91 },
+  { id: 1, name: "Kullu Fresh", origin:'Kullu', variety: 'Honeycrisp', price: 2.5, stock: 5000, quality: 95, source :"/a4.jpeg" },
+  { id: 2, name: "Shimla Royal Orchards", origin:'Manali', variety:'Gala', price: 1.8, stock: 8000, quality: 92, source :"/a2.jpeg" },
+  { id: 3, name: "Pahadi Farms", origin:'Shimla',  variety:'Fuji', price: 2.2, stock: 6000, quality: 94, source :"/a3.jpeg" },
+  { id: 4, name: "Rawat Apple Company", origin:'Dehradun', variety:'Granny Smith', price: 1.9, stock: 7000, quality: 91, source :"/a5.jpeg" },
+  { id: 5, name: "Hills Fresh",  origin:'Kullu',variety:'Honeycrisp', price: 2.5, stock: 5000, quality: 95, source :"/a6.jpeg" },
+  { id: 6, name: "Apple Paradise", origin:'Kullu', variety:'Gala', price: 1.8, stock: 8000, quality: 92, source :"/a7.jpeg" },
+  { id: 7, name: "GOAT Apples", origin:'Shimla', variety:'Fuji', price: 2.2, stock: 6000, quality: 94, source :"/a1.jpeg" },
+  { id: 8, name: "Skibidi apples", origin:'Shimla', variety:'Granny Smith', price: 1.9, stock: 7000, quality: 91, source :"/a9.jpeg" },
 ];
 
 const AppleCard = ({ apple, addToCart }) => (
-    <div className="relative bg-white rounded-lg shadow-md p-4 transition-all duration-300 hover:shadow-lg overflow-hidden">
-      {/* Hover Overlay */}
-      <div className="absolute inset-0 h-[295px] py-20 bg-gray-800 bg-opacity-75 text-white flex flex-col pb-20 justify-center items-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-        <p className="text-lg font-semibold mb-2">Origin: {apple.origin}</p>
-        <p className="text-md">Orchard: {apple.name}</p>
-      </div>
-  
-      {/* Card Content */}
-      <img 
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAQS6eiq0dYcLmujOEqEIxxKr8tb10CWEBog&s"
-        alt={apple.name} 
-        className="w-full h-40 object-cover rounded-md mb-4"
-      />
-      <h3 className="text-lg font-semibold mb-2">{apple.name}</h3>
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-green-600 font-bold">${apple.price.toFixed(2)}/lb</span>
-        <span className="text-gray-600">Stock: {apple.stock} lbs</span>
-      </div>
-      <div className="flex items-center mb-4">
-        <BarChart2 className="text-blue-500 mr-2" />
-        <span className="text-sm">Quality Score: {apple.quality}%</span>
-      </div>
-      <button 
-        onClick={() => addToCart(apple)} 
-        className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
-      >
-        Add to Cart
-      </button>
+  <div className="relative bg-white rounded-lg shadow-md p-4 transition-all duration-300 hover:shadow-lg overflow-hidden">
+    {/* Hover Overlay */}
+    <div className="absolute inset-0 h-[295px] py-20 bg-gray-800 bg-opacity-75 text-white flex flex-col pb-20 justify-center items-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+      <p className="text-lg font-semibold mb-2">Origin: {apple.origin}</p>
+      <p className="text-md">Orchard: {apple.name}</p>
     </div>
-  );
+
+    {/* Card Content */}
+    <img 
+      src={apple.source}  // Use the unique image source here
+      alt={apple.name} 
+      className="w-full h-40 object-cover rounded-md mb-4"
+    />
+    <h3 className="text-lg font-semibold mb-2">{apple.name}</h3>
+    <div className="flex justify-between items-center mb-2">
+      <span className="text-green-600 font-bold">₹{apple.price.toFixed(2)}/kg</span>
+      <span className="text-gray-600">Stock: {apple.stock} kgs</span>
+    </div>
+    <div className="flex items-center mb-4">
+      <BarChart2 className="text-blue-500 mr-2" />
+      <span className="text-sm">Quality Score: {apple.quality}%</span>
+    </div>
+    <button 
+      onClick={() => addToCart(apple)} 
+      className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+    >
+      Add to Cart
+    </button>
+  </div>
+);
+
 
 const Cart = ({ items, removeFromCart }) => (
   <div className="bg-white rounded-lg shadow-md p-4">
@@ -55,12 +56,12 @@ const Cart = ({ items, removeFromCart }) => (
       <>
         {items.map((item) => (
           <div key={item.id} className="flex justify-between items-center mb-2">
-            <span>{item.name} - ${item.price.toFixed(2)}/lb x {item.quantity}lb</span>
+            <span>{item.name} - ₹{item.price.toFixed(2)}/kg x {item.quantity}lb</span>
             <button onClick={() => removeFromCart(item.id)} className="text-red-500">Remove</button>
           </div>
         ))}
         <div className="mt-4 pt-4 border-t border-gray-200">
-          <strong>Total: ${items.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2)}</strong>
+          <strong>Total: ₹{items.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2)}</strong>
         </div>
         <button className="w-full mt-4 bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition-colors duration-300">
           Checkout

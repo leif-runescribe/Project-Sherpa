@@ -15,8 +15,8 @@ export default function Navbar({ onMenuClick }) {
         <div className="flex justify-between md:h-15">
           <Link to="/">
             <div className="flex items-center">
-              <img src="/drone.jpg" alt="Logo" className="h-[70px] w-auto rounded-full border-2 border-white shadow-lg" />
-              <span className="ml-4 text-2xl sm:text-3xl font-bold text-white bg-clip-text text-transparent">Project Sherpa</span>
+              <img src="/log2.png" alt="Logo" className="h-[70px] w-auto  border-white " />
+              <span className="ml-4 text-2xl sm:text-3xl font-bold text-white bg-clip-text text-transparent">SHERPA</span>
             </div>
           </Link>
 

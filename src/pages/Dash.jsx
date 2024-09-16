@@ -30,7 +30,7 @@ const Dash = () => {
   }, []);
 
   return (<div>
-    {state.isAuthenticated ? (
+    {/* {state.isAuthenticated ? (
     <div className="App">
       {droneData ? (
         <Dashboard data={droneData} />
@@ -59,7 +59,24 @@ const Dash = () => {
         </Link>
       </div>
     </div>
-    )}
+    )
+    } */}
+    <div className="App">
+      {droneData ? (
+        <Dashboard data={droneData} />
+      ) : (
+        <div className='mt-40 text-4xl flex font-bold justify-center items-center'>Fetching report...
+        <div
+        className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-black"
+        role="status">
+        <span
+        className="!absolute text-b !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+        ></span>
+        </div>
+        </div>
+        
+      )}
+    </div>
     </div>
   
   );
