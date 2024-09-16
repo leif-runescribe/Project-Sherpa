@@ -165,38 +165,7 @@ const BusinessModel = () => {
           </div>
         </div>
 
-        {/* Drones Section */}
-        <div className='px-40 py-20'>
-          <h3 className="text-4xl font-semibold text-gray-200 mb-4">
-            Drones Business
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="text-3xl font-semibold text-gray-200">
-                National Level
-              </h4>
-              <ul className="list-disc ml-6 text-2xl text-gray-200">
-                {modelData.drone.national.map((item, idx) => (
-                  <li key={idx} className="my-2">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-3xl font-semibold text-gray-200">
-                International Level
-              </h4>
-              <ul className="list-disc ml-6 text-3xl text-gray-200">
-                {modelData.drone.international.map((item, idx) => (
-                  <li key={idx} className="my-2">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+        
       </div>
       </div>
       </Layout>
